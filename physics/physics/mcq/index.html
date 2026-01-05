@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MCQ Practice – RHK Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial; background:#f4f6fb; padding:15px; }
+    .card { background:#fff; padding:15px; border-radius:10px; }
+    button { padding:10px 15px; background:#2b4eff; color:#fff; border:none; border-radius:6px; }
+  </style>
+</head>
+<body>
+
+<h2>📝 MCQ Practice</h2>
+
+<div class="card">
+  <p><b>Q1.</b> Newton’s 3rd law is about?</p>
+  <label><input type="radio" name="q1" value="a"> Force</label><br>
+  <label><input type="radio" name="q1" value="b"> Action & Reaction</label><br>
+  <label><input type="radio" name="q1" value="c"> Energy</label><br><br>
+
+  <button onclick="check()">Submit</button>
+  <p id="result"></p>
+</div>
+
+<script>
+function check(){
+  let ans = document.querySelector('input[name="q1"]:checked');
+  if(!ans){
+    alert("Please select an answer");
+    return;
+  }
+  if(ans.value === "b"){
+    document.getElementById("result").innerText = "✅ Correct!";
+  } else {
+    document.getElementById("result").innerText = "❌ Wrong. Correct answer: Action & Reaction";
+  }
+}
+</script>
+
+</body>
+</html>
